@@ -1,2 +1,2 @@
 # Divided_DA_For_large_size
- 
+ In DA,it must be noted that as filter size(fixed coefficients) increases,the LUT size is growing.for example, for 4-tap filter,2^4 LUT entries required.If it is 128-tap filter,it becomes 2^128 which is very large.This problem can be solved by breaking up the filter into smaller base DA filtering units and summing up the outputs of these units.K-tap filter is divided into m smaller filters each having k-tap DA base units(K=m*k).K is not prime.For 4-tap m=2,k=2.Number of clock cycles required to for this implementation is B+log2(m).Where B is size of input sample i.e X[n].
